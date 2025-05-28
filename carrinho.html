@@ -7,50 +7,117 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fffaf0;
+            background-color: #fdf6e3;
             padding: 20px;
             max-width: 900px;
             margin: 0 auto;
         }
+
         h1 {
             color: #2e2e2e;
         }
+
         .produto-carrinho {
             border: 2px solid #8bc34a;
             border-radius: 10px;
             padding: 20px;
             display: flex;
             gap: 20px;
-            background: white;
+            background:white;
+            flex-wrap: wrap;
         }
+
         .produto-carrinho img {
-            max-width: 150px;
+            max-width: 275px;
             height: auto;
             border-radius: 10px;
         }
+
         .detalhes {
             flex: 1;
+            min-width: 250px;
         }
+
         .detalhes h2 {
             margin-top: 0;
             color: #2e2e2e;
         }
+
         .detalhes p.preco {
             font-weight: bold;
-            color: #8bc34a;
+            color: #2e2e2e;
             font-size: 1.3rem;
         }
+
         .detalhes p.quantidade {
             font-size: 1.1rem;
         }
+
         a {
             display: inline-block;
             margin-top: 30px;
             color: #00bcd4;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
+        }
+
+        #formulario {
+            flex: 1;
+            min-width: 100px;
+            background-color: #fffaf0;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #8bc34a;
+            margin-top: 20px;
+        }
+
+        #formulario h2 {
+            color: #2e2e2e;
+            font-size: 1.3rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #2e2e2e;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="enderço"] {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 15px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #8bc34a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #8bc34a;
         }
     </style>
 </head>
@@ -64,14 +131,37 @@
             <p class="preco">R$ 49,90</p>
             <p class="quantidade">Quantidade: <span id="quantidade-span">1</span></p>
         </div>
+        <section id="formulario">
+            <h2>Informe seus dados</h2>
+            <form method="get" action="obrigado.html">
+                <label>Nome:</label>
+                <input type="text" name="nome" placeholder="Digite seu nome" required>
+
+                <label>Telefone:</label>
+                <input type="tel" name="telefone" placeholder="Digite seu número de telefone" required>
+
+                <label>E-mail:</label>
+                <input type="email" name="email" placeholder="seunome@email.com" required>
+
+                <label>Endereço:</label>
+                <input type="enderço" name="enderço" placeholder="Digite seu endereço" required>
+
+                <label>
+                    <input type="checkbox" name="termo" value="aceito" required>
+                    Aceito os termos do site para envio dos dados.
+                </label>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </div>
 
-    <a href="index.html"  style="text-decoration:none; color:inherit;">← Voltar para a loja</a>
+    <a href="index.html" style="text-decoration:none; color:inherit";>← Voltar para a loja</a>
 
     <script>
-      const params = new URLSearchParams(window.location.search);
-      const quantidade = params.get('quantidade') || '1';
-      document.getElementById('quantidade-span').textContent = quantidade;
+        const params = new URLSearchParams(window.location.search);
+        const quantidade = params.get('quantidade') || '1';
+        document.getElementById('quantidade-span').textContent = quantidade;
     </script>
 </body>
 </html>
