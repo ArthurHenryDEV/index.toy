@@ -1,0 +1,114 @@
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fffaf0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.produto-imagem {
+    display: inline-block;
+    border: 2px solid #8bc34a;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+}
+
+.produto-imagem img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;        
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.produto-detalhes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produto-detalhes h1 {
+    font-size: 2rem;
+    color: #2e2e2e;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8bc34a;
+    margin: 15px 0;
+}
+
+.descricao {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+    color: #2e2e2e;
+}
+
+select {
+    margin-top: 8px;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #8bc34a;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #7aae36;
+}
+
+.voltar-link {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.voltar-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .produto-imagem, .produto-detalhes {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
