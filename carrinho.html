@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Carrinho - Brinquedos Mágicos</title>
+    <link rel="stylesheet" href="styletoy.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffaf0;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #2e2e2e;
+        }
+        .produto-carrinho {
+            border: 2px solid #8bc34a;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+            background: white;
+        }
+        .produto-carrinho img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .detalhes {
+            flex: 1;
+        }
+        .detalhes h2 {
+            margin-top: 0;
+            color: #2e2e2e;
+        }
+        .detalhes p.preco {
+            font-weight: bold;
+            color: #8bc34a;
+            font-size: 1.3rem;
+        }
+        .detalhes p.quantidade {
+            font-size: 1.1rem;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            color: #00bcd4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seu Carrinho</h1>
+
+    <div class="produto-carrinho">
+        <img src="https://66703.cdn.simplo7.net/static/66703/sku/franquias-dc-comics-boneco-mcfarlane-toys-animated-superman-dc-multiverse--p-1663957414546.jpg" alt="Boneco Super Man" />
+        <div class="detalhes">
+            <h2>Boneco do Super Man</h2>
+            <p class="preco">R$ 49,90</p>
+            <p class="quantidade">Quantidade: <span id="quantidade-span">1</span></p>
+        </div>
+    </div>
+
+    <a href="index.html"  style="text-decoration:none; color:inherit;">← Voltar para a loja</a>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const quantidade = params.get('quantidade') || '1';
+      document.getElementById('quantidade-span').textContent = quantidade;
+    </script>
+</body>
+</html>
