@@ -1,6 +1,6 @@
 # Brinquedos Mágicos
 
-#indextoy.html
+#indextoy.html e #styletoy.css
 
 
 <img width="1439" alt="Captura de Tela 2025-05-28 às 23 23 08" src="https://github.com/user-attachments/assets/df872ef6-59ae-4ec1-a04b-bad6dd894a40" />
@@ -8,7 +8,7 @@
 Página com design simplificado voltado para parentes que desejam adquirir produtos para seus filhos.
 
 
-#superman.html
+#superman.html e #compra.css
 
 
 <img width="1440" alt="Captura de Tela 2025-05-28 às 23 28 52" src="https://github.com/user-attachments/assets/86e04f7d-d64b-45a9-ac01-92dacc566126" />
