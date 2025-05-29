@@ -8,6 +8,15 @@
 Página com design simplificado voltado para parentes que desejam adquirir produtos para seus filhos.
 
 
+#compra.css
+
+
+<img width="1438" alt="Captura de Tela 2025-05-28 às 23 35 55" src="https://github.com/user-attachments/assets/bb1c63dd-f661-4c95-ba9e-f04e5658e3f9" />
+
+
+Exibição do item selecionado.
+
+
 #superman.html
 
 
